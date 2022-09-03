@@ -16,6 +16,14 @@ module.exports = {
         assetModuleFilename: "assets/[hash][ext][query]",
         clean: true,
     },
+    devServer: {
+        open: true,
+        hot: false,
+        port: 8080,
+        static: {
+            directory: path.join(__dirname, 'public'),
+        }
+    },
     devtool: 'source-map',
     plugins: [
         new MiniCssExtractPlugin({
