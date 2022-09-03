@@ -1,4 +1,23 @@
 import './styles/index.scss';
-import { five } from './js/helper.js';
+import five from './js/helper';
+import img from './images/img';
 
-console.log(five)
+console.log(five);
+
+const wrapper = document.createElement('div');
+wrapper.classList.add('wrapper');
+const body = document.querySelector('body');
+body.appendChild(wrapper);
+
+const imgBox = document.createElement('div');
+imgBox.classList.add('imgBox');
+imgBox.style.background = `url(${img.cafe})`;
+imgBox.style.backgroundPosition = 'center';
+imgBox.style.backgroundRepeat = 'no-repeat';
+imgBox.style.backgroundSize = 'contain';
+wrapper.appendChild(imgBox);
+
+const text = document.createElement('div');
+text.classList.add('text');
+text.textContent = 'Hello World';
+wrapper.appendChild(text);

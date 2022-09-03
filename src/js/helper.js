@@ -1,1 +1,3 @@
-export const five = 5;
+const five = 5;
+
+export default five;
