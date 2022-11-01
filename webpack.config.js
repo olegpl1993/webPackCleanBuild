@@ -55,6 +55,17 @@ module.exports = {
                 ]
             },
             {
+              test: /\.(mp3|wav|wma|ogg)$/,
+              use: {
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[contenthash].[ext]',
+                  outputPath: 'assets/',
+                  publicPath: 'assets/'
+                }
+              }
+            },
+            {
                 test: /\.html$/i,
                 loader: "html-loader",
             },

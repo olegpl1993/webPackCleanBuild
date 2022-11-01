@@ -1,5 +1,31 @@
-//сюда подключаются все модули стилей
 @use 'nullstyle';
 @use 'fonts';
-@use 'global';
+
+$greyColor: rgb(100, 100, 100);
+
+html {
+    font-family: robotoReg;
+    color: $greyColor;
+}
+
+.wrapper {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.imgBox {
+    width: 500px;
+    height: 500px;
+}
+
+.text {
+    font-size: 50px;
+}
 

@@ -1,6 +1,7 @@
 import './styles/index.scss';
 import five from './js/helper';
 import img from './images/img';
+import sound from './sounds/sound.mp3';
 
 console.log(five);
 
@@ -21,3 +22,8 @@ const text = document.createElement('div');
 text.classList.add('text');
 text.textContent = 'Hello World';
 wrapper.appendChild(text);
+
+const audio = new Audio(sound); // создает обьект музыки
+audio.controls = 'true';
+wrapper.appendChild(audio);
+
